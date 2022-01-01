@@ -1,7 +1,6 @@
 import Task from './Task'
 const Tasks = ({ tasks }) => {
 
-    
     return (
         <>
             {tasks.map((task) => (
@@ -9,6 +8,7 @@ const Tasks = ({ tasks }) => {
             ))}
         </>
     )
+
 }
 
 export default Tasks
