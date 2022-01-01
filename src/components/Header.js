@@ -11,8 +11,6 @@ const Header = ({ title }) => {
         <header className='header'>
             <h1>{title}</h1>
             <Button color='green' text='Hello' onClick={onClick}/>
-            <Button color='blue' text='Bonjour' />
-            <Button color='red' text='Muraho'/>
         </header>
     )
 }
