@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import AddTask from './components/AddTask';
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 
@@ -38,6 +39,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <AddTask />
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>
       ) : (
