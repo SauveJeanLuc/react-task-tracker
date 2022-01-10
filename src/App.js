@@ -85,13 +85,25 @@ function App() {
     <Router>
       <div className="App">
         <Header onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
-        {showAddTask && <AddTask onAdd={addTask} />}
+        {/* {showAddTask && <AddTask onAdd={addTask} />}
         {tasks.length > 0 ? (
           <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>
         ) : (
             'No Tasks To Show'
-        )}
+        )} */}
         <Routes>
+          <Route path={'/'} exact={true} render={(props) => (
+            <>
+              {/* These are not showing up, Please fix bug */}
+              {showAddTask && <AddTask onAdd={addTask} />}
+              {tasks.length > 0 ? (
+                <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>
+              ) : (
+                  'No Tasks To Show'
+              )}             
+            </>
+          )} />
+
           <Route path='/about' element={<About />} />
         </Routes>
         <Footer /> 
