@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import AddTask from './components/AddTask';
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Tasks from "./components/Tasks";
 
 function App() {
@@ -87,8 +88,8 @@ function App() {
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>
       ) : (
           'No Tasks To Show'
-      )
-      }
+      )}
+      <Footer />
     </div>
   );
 }
